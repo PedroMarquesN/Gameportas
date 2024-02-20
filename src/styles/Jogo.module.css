@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-around;
     align-self: stretch;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 
