@@ -6,8 +6,20 @@ import Link from "next/link";
 import {useRouter} from "next/router";
 
 export default function jogo(){
+
+    const [valid , setValid] = useState(false)
     const [portas, setPortas] = useState([])
     const router = useRouter()
+
+    useEffect(() => {
+        const portas = +router?.query.portas
+        const temPresente = +router?.query.temPresente
+        const portasValidas = portas >=3 && portas <=100
+        const temPresenteValido = temPresente>=1 && temPresente <= portas
+
+        setValid(portasValidas && temPresenteValido)
+
+    }, [portas])
 
     useEffect(() => {
         const portas = +router?.query.portas
@@ -23,7 +35,7 @@ export default function jogo(){
     return (
         <div id={styles.jogo} >
             <div className={styles.portas}>
-                {renderizarPortas()}
+                { valid ? renderizarPortas() : <h1>Erro , digite as quantidades Corretamente !</h1>}
 
             </div>
             <div className={styles.botoes}>
