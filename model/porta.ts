@@ -27,6 +27,9 @@ export default class PortaModel{
     get metodoAberta(){
         return this.aberta
     }
+    get metodoFechado(){
+        return !this.aberta
+    }
     desmarcar(){
         const selecionada = false
         return new PortaModel(this.metodoNumero,this.metodoTemPresente,selecionada, this.metodoAberta)
