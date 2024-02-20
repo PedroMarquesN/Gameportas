@@ -27,7 +27,7 @@ export default function jogo(){
 
             </div>
             <div className={styles.botoes}>
-            <Link href="/public">
+            <Link href="/">
                 <button> Reiniciar Jogo</button>
             </Link>
             </div>
