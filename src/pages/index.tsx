@@ -6,7 +6,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
- <Porta1/>
+      <div style={{display:"flex"}}>
+        <Porta1 selecionada />
+        <Porta1 />
+      </div>
 
 
   );
