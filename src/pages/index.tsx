@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Presente from "../../components/Presente";
+import Porta1 from "../../components/Porta1";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-  <Presente/>
+ <Porta1/>
 
 
   );

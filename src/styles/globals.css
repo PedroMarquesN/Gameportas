@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+  box-sizing: border-box;
+}
 
 body {
   background-color: #251e1e;
   color: white;
+}
+
+:root {
+  --area-porta-altura: 310px;
+  --area-porta-largura: 200px;
+
 }
 
