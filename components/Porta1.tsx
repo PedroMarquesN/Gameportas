@@ -10,8 +10,8 @@ export default function Porta1(props: PortaProps) {
     const porta = props.value
     const selecionada = porta.metodoSelecionada && !porta.metodoAberta ? styles.selecionada : ''
 
-    const alternarSelecao = e => props.onChange(porta.alternarSelecao())
-    const abrir = e => {
+    const alternarSelecao = () => props.onChange(porta.alternarSelecao())
+    const abrir = (e: { stopPropagation: () => void; }) => {
         e.stopPropagation()
         props.onChange(porta.abrir())
     }
